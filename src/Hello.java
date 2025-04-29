@@ -47,5 +47,20 @@ public class Hello {
         String s = (isDomestic) ? "This car is domestic" : "This car is not domestic";
 
         System.out.println(s);
+
+        double myFirstValue = 20.00d;
+        double mySecondValue = 80.00d;
+        double myValuesTotal = (myFirstValue + mySecondValue) * 100.00d;
+        System.out.println("MyValuesTotal = " + myValuesTotal);
+
+        double theRemainder = myValuesTotal % 40.00d;
+        System.out.println("theRemainder = " + theRemainder);
+
+        boolean isNoRemainder = (theRemainder == 0.00d) ? true : false;
+        System.out.println("isNoReminder = " + isNoRemainder);
+
+        if (!isNoRemainder) {
+            System.out.println("Got some remainder");
+        }
     }
 }
