@@ -8,24 +8,7 @@ public class IfThenElseChallenge {
 
         int finalScore = score;
 
-        if (gameOver) {
-            finalScore += (levelCompleted * bonus);
-            finalScore += 1000;
-            System.out.println("Your final score was " + finalScore);
-        }
-
-//        boolean newGameOver = true;
-//        int newScore = 10000;
-//        int newLevelCompleted = 8;
-//        int newBonus = 200;
-//
-//        int newFinalScore = newScore;
-//
-//        if (newGameOver) {
-//            newFinalScore += (newLevelCompleted * newBonus);
-//            System.out.println("Your final score was " + newFinalScore);
-//        }
-
+        calculatorScore(true, 800, levelCompleted, bonus);
         score = 10000;
         levelCompleted = 8;
         bonus = 200;
@@ -34,6 +17,17 @@ public class IfThenElseChallenge {
 
         if (gameOver) {
             finalScore += (levelCompleted * bonus);
+            System.out.println("Your final score was " + finalScore);
+        }
+    }
+
+    public static void calculatorScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+
+        int finalScore = score;
+
+        if (gameOver) {
+            finalScore += (levelCompleted * bonus);
+            finalScore += 1000;
             System.out.println("Your final score was " + finalScore);
         }
     }
