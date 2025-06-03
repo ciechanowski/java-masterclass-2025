@@ -6,29 +6,26 @@ public class IfThenElseChallenge {
         int levelCompleted = 5;
         int bonus = 100;
 
-        int finalScore = score;
+        int highScore = calculatorScore(gameOver, score, levelCompleted, bonus);
+        System.out.println("The highScore is " + highScore);
 
-        calculatorScore(true, 800, levelCompleted, bonus);
         score = 10000;
         levelCompleted = 8;
         bonus = 200;
 
-        finalScore = score;
-
-        if (gameOver) {
-            finalScore += (levelCompleted * bonus);
-            System.out.println("Your final score was " + finalScore);
-        }
+        System.out.println("The next highScore is " +
+                calculatorScore(gameOver, score, levelCompleted, bonus));
     }
 
-    public static void calculatorScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+    public static int calculatorScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
         int finalScore = score;
 
         if (gameOver) {
             finalScore += (levelCompleted * bonus);
             finalScore += 1000;
-            System.out.println("Your final score was " + finalScore);
         }
+
+        return finalScore;
     }
 }
